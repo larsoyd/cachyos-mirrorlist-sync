@@ -1,0 +1,8 @@
+[Unit]
+Description=Sync CachyOS mirrorlists from upstream PKGBUILDs
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/cachyos-mirrorlist-sync
